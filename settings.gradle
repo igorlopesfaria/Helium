@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Helium"
+include ':app'
+include ':bottomsheet'
+include ':button'
+include ':cell'
+include ':checkbox'
+include ':core'
+include ':tag'
+include ':togglebutton'
+include ':statusview'
