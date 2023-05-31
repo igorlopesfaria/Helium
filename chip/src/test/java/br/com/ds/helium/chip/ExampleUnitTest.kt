@@ -1,4 +1,4 @@
-package br.com.ds.helium.tag
+package br.com.ds.helium.chip
 
 import org.junit.Test
 

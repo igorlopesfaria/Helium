@@ -13,6 +13,7 @@ object Apps {
 
 object Module {
     const val core = ":core"
+    const val chip = ":chip"
     const val button = ":button"
 }
 

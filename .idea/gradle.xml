@@ -16,9 +16,9 @@
             <option value="$PROJECT_DIR$/button" />
             <option value="$PROJECT_DIR$/cell" />
             <option value="$PROJECT_DIR$/checkbox" />
+            <option value="$PROJECT_DIR$/chip" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/statusview" />
-            <option value="$PROJECT_DIR$/tag" />
             <option value="$PROJECT_DIR$/togglebutton" />
           </set>
         </option>
