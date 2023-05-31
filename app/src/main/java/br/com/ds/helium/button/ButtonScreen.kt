@@ -84,6 +84,7 @@ fun ListButton(modifier: Modifier = Modifier) {
                 HeliumButton(
                     type = HeliumButtonType.Secondary,
                     isLoading = loadingSecondaryButton.value,
+                    enabled = false,
                     size = HeliumButtonSize.Tiny,
                     onClick = { loadingSecondaryButton.value = !loadingSecondaryButton.value },
                     text = "Click aqui"

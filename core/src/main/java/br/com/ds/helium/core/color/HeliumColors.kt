@@ -63,14 +63,3 @@ object HeliumColor {
 
 
 }
-//var ColorScheme.textColorPrimary: Color
-//    get() = textColorPrimarySchemeColor
-//    set(value) {
-//        textColorPrimarySchemeColor = value
-//    }
-//
-//var ColorScheme.textColorSecondary: Color
-//    get() = textColorSecondarySchemeColor
-//    set(value) {
-//        textColorSecondarySchemeColor = value
-//    }

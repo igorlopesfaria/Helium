@@ -15,6 +15,7 @@ import androidx.compose.foundation.progressSemantics
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -50,8 +51,12 @@ internal fun HeliumButtonSecondary (
         onClick = onClick,
         enabled = enabled,
         modifier = modifier.height(size.getHeight()),
+        colors = ButtonDefaults.buttonColors(
+            disabledContainerColor = MaterialTheme.colorScheme.secondaryContainer,
+            containerColor = MaterialTheme.colorScheme.primaryContainer
+        ),
         shape = RoundedCornerShape(HeliumRadiusSize.medium),
-        border = BorderStroke(HeliumBorderSize.small, MaterialTheme.colorScheme.primary)
+        border = BorderStroke(HeliumBorderSize.small,  if(enabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSecondary)
     ) {
         Box(contentAlignment = Alignment.Center){
                 CircularProgressIndicator(
@@ -72,17 +77,18 @@ internal fun HeliumButtonSecondary (
                             .wrapContentHeight(align = Alignment.CenterVertically).size(size.getIconSize())
                             .alpha((!isLoading).alphaVisibility()),
                         contentDescription = "drawable_icons",
-                        tint = MaterialTheme.colorScheme.primary
+                        tint = if(enabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSecondary
+
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                 }
                 Text(
-                    text = text.uppercase(),
+                    text = text,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxHeight().wrapContentHeight(align = Alignment.CenterVertically)
                         .alpha((!isLoading).alphaVisibility()),
                     style = size.getTypography(),
-                    color= MaterialTheme.colorScheme.primary
+                    color=  if(enabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSecondary
                 )
                 if(icon != null) {
                     Spacer(modifier = Modifier.width(12.dp))
@@ -114,7 +120,6 @@ private fun LightButtonPreview() {
         Surface {
             HeliumButtonSecondary(
                 isLoading = false,
-                enabled = false,
                 icon = Icons.Default.Email,
                 onClick = { /*TODO*/ },
                 text = "Igor Light"

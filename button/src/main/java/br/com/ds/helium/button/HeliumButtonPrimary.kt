@@ -79,7 +79,7 @@ internal fun HeliumButtonPrimary (
                     Spacer(modifier = Modifier.width(4.dp))
                 }
                 Text(
-                    text = text.uppercase(),
+                    text = text,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxHeight().wrapContentHeight(align = Alignment.CenterVertically)
                         .alpha((!isLoading).alphaVisibility()),
