@@ -57,6 +57,7 @@ fun HeliumChip(
         Box(modifier = Modifier.padding(8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically){
                 icon?.let {
+                    Spacer(modifier = Modifier.width(2.dp))
                     Icon(
                         imageVector = icon,
                         modifier =Modifier.size(14.dp).padding(top = HeliumMargin.xxxxs),
@@ -109,6 +110,7 @@ private fun DarkFontPreview() {
         Surface {
             HeliumChip(
                 selected = true,
+                hasCloseIcon = true,
                 icon =  Icons.Default.Email,
                 onClick = { /*TODO*/ },
                 text = " Chip Dark"
@@ -125,7 +127,6 @@ private fun LightButtonPreview() {
             HeliumChip(
                 selected = false,
                 icon =  Icons.Default.Favorite,
-                hasCloseIcon = true,
                 onClick = { /*TODO*/ },
                 text = " Chip Light"
             )
