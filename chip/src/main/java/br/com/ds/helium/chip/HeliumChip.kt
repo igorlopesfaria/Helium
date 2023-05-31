@@ -10,9 +10,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -37,8 +39,8 @@ fun HeliumChip(
     text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    hasCloseIcon: Boolean = false,
-    icon: ImageVector? = null,
+    iconLeft: ImageVector? = null,
+    iconRight: ImageVector? = null,
 ) {
 
     Surface (
@@ -56,9 +58,9 @@ fun HeliumChip(
     ) {
         Box(modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 6.dp,  bottom = 8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically){
-                icon?.let {
+                iconLeft?.let {
                     Icon(
-                        imageVector = icon,
+                        imageVector = iconLeft,
                         modifier =Modifier.size(14.dp).padding(top = HeliumMargin.xxxxs),
                         contentDescription = "drawable_icons",
                         tint = when {
@@ -68,7 +70,7 @@ fun HeliumChip(
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                 } ?: run {
-                   if (hasCloseIcon)
+                   if (iconRight != null)
                        Spacer(modifier = Modifier.width(6.dp))
 
                 }
@@ -85,10 +87,10 @@ fun HeliumChip(
                     },
                 )
 
-                if(hasCloseIcon) {
+                if(iconRight != null) {
                     Spacer(modifier = Modifier.width(6.dp))
                     Icon(
-                        imageVector = Icons.Default.Close,
+                        imageVector = iconRight,
                         modifier =Modifier.size(14.dp).padding(top = HeliumMargin.xxxxs),
                         contentDescription = "drawable_icons",
                         tint = when {
@@ -97,7 +99,7 @@ fun HeliumChip(
                         }
                     )
 
-                } else if(icon != null) {
+                } else if(iconLeft != null) {
                     Spacer(modifier = Modifier.width(4.dp))
                 }
 
@@ -113,8 +115,8 @@ private fun DarkFontPreview() {
         Surface {
             HeliumChip(
                 selected = true,
-                hasCloseIcon = true,
-                icon =  Icons.Default.Email,
+                iconLeft =  Icons.Default.Email,
+                iconRight = Icons.Default.Close,
                 onClick = { /*TODO*/ },
                 text = " Chip Dark"
             )
@@ -129,7 +131,8 @@ private fun LightButtonPreview() {
         Surface {
             HeliumChip(
                 selected = false,
-                icon =  Icons.Default.Favorite,
+                iconLeft =  Icons.Default.Favorite,
+                iconRight = Icons.Default.KeyboardArrowDown,
                 onClick = { /*TODO*/ },
                 text = " Chip Light"
             )

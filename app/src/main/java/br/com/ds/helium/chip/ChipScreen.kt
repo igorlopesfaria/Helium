@@ -11,7 +11,9 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -32,19 +34,8 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = false,
-                            icon = Icons.Default.Favorite,
-                            onClick = { /*TODO*/ },
-                            hasCloseIcon = true,
-                            text = item
-                        )
-                    }
-                }
-                LazyRow {
-                    itemsIndexed(chipList) { index, item ->
-                        Spacer(modifier = Modifier.width(6.dp))
-                        HeliumChip(
-                            selected = false,
-                            icon = Icons.Default.Favorite,
+                            iconLeft = Icons.Default.Favorite,
+                            iconRight = Icons.Default.KeyboardArrowDown,
                             onClick = { /*TODO*/ },
                             text = item
                         )
@@ -55,8 +46,19 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = false,
+                            iconLeft = Icons.Default.Favorite,
                             onClick = { /*TODO*/ },
-                            hasCloseIcon = true,
+                            text = item
+                        )
+                    }
+                }
+                LazyRow {
+                    itemsIndexed(chipList) { index, item ->
+                        Spacer(modifier = Modifier.width(6.dp))
+                        HeliumChip(
+                            selected = false,
+                            onClick = { /*TODO*/ },
+                            iconRight = Icons.Default.KeyboardArrowDown,
                             text = item
                         )
                     }
@@ -79,9 +81,9 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = true,
-                            icon = Icons.Default.Favorite,
+                            iconLeft = Icons.Default.Favorite,
                             onClick = { /*TODO*/ },
-                            hasCloseIcon = true,
+                            iconRight = Icons.Default.Close,
                             text = item
                         )
                     }
@@ -91,7 +93,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = true,
-                            icon = Icons.Default.Favorite,
+                            iconLeft = Icons.Default.Favorite,
                             onClick = { /*TODO*/ },
                             text = item
                         )
@@ -103,7 +105,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                         HeliumChip(
                             selected = true,
                             onClick = { /*TODO*/ },
-                            hasCloseIcon = true,
+                            iconRight = Icons.Default.Close,
                             text = item
                         )
                     }
