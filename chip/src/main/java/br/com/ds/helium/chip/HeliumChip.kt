@@ -54,7 +54,7 @@ fun HeliumChip(
         modifier = modifier,
         onClick = onClick
     ) {
-        Box(modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 4.dp,  bottom = 4.dp)) {
+        Box(modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 6.dp,  bottom = 8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically){
                 icon?.let {
                     Icon(
@@ -66,7 +66,7 @@ fun HeliumChip(
                             else -> MaterialTheme.colorScheme.primary
                         }
                     )
-                    Spacer(modifier = Modifier.width(2.dp))
+                    Spacer(modifier = Modifier.width(4.dp))
                 } ?: run {
                    if (hasCloseIcon)
                        Spacer(modifier = Modifier.width(6.dp))
