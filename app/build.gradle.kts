@@ -63,6 +63,7 @@ android {
 
 dependencies {
 
+    implementation(project(Module.chip))
     implementation(project(Module.core))
     implementation(project(Module.button))
 

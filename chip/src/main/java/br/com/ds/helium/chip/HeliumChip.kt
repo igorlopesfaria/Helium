@@ -39,7 +39,7 @@ fun HeliumChip(
     modifier: Modifier = Modifier,
     hasCloseIcon: Boolean = false,
     icon: ImageVector? = null,
-    ) {
+) {
 
     Surface (
         color = when {
@@ -54,10 +54,9 @@ fun HeliumChip(
         modifier = modifier,
         onClick = onClick
     ) {
-        Box(modifier = Modifier.padding(8.dp)) {
+        Box(modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 4.dp,  bottom = 4.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically){
                 icon?.let {
-                    Spacer(modifier = Modifier.width(2.dp))
                     Icon(
                         imageVector = icon,
                         modifier =Modifier.size(14.dp).padding(top = HeliumMargin.xxxxs),
@@ -67,6 +66,11 @@ fun HeliumChip(
                             else -> MaterialTheme.colorScheme.primary
                         }
                     )
+                    Spacer(modifier = Modifier.width(2.dp))
+                } ?: run {
+                   if (hasCloseIcon)
+                       Spacer(modifier = Modifier.width(6.dp))
+
                 }
                 Text(
                     text = text,
@@ -92,10 +96,9 @@ fun HeliumChip(
                             else -> MaterialTheme.colorScheme.primary
                         }
                     )
-                    Spacer(modifier = Modifier.width(6.dp))
 
                 } else if(icon != null) {
-                    Spacer(modifier = Modifier.width(8.dp))
+                    Spacer(modifier = Modifier.width(4.dp))
                 }
 
             }

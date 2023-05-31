@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.ds.helium.button.ListButton
+import br.com.ds.helium.chip.ChipScreen
 import br.com.ds.helium.core.HeliumTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ListButton()
+                    ChipScreen()
                 }
             }
         }
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
 fun GreetingPreview() {
     HeliumTheme {
         Surface ( color = MaterialTheme.colorScheme.background) {
-            ListButton()
+            ChipScreen()
         }
     }
 }
