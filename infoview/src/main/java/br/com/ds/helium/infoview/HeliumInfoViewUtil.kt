@@ -29,11 +29,3 @@ internal fun HeliumInfoViewType.getIcon(): ImageVector {
     }
 }
 
-internal fun HeliumInfoViewType.getColor(): Color {
-    return when (this){
-        HeliumInfoViewType.Info -> HeliumColor.info
-        HeliumInfoViewType.Warning -> HeliumColor.warning
-        HeliumInfoViewType.Alert -> HeliumColor.error
-    }
-}
-
