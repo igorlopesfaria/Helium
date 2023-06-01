@@ -89,7 +89,7 @@ private fun LightButtonPreview() {
     HeliumTheme {
         Surface {
             HeliumStatusView(
-                type = HeliumStatusViewType.Warning,
+                type = HeliumStatusViewType.GenericError,
                 description = " Chip LightChip LightChip LightChip LightChip LightChip LightChip Light",
                 onClick = {},
                 buttonText = "Tentar de novo",

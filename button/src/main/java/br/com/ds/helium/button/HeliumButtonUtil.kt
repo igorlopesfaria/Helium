@@ -39,9 +39,9 @@ internal fun HeliumButtonSize.getProgressSize(): Dp {
 @Composable
 internal fun HeliumButtonSize.getTypography(): TextStyle {
     return when (this){
-        HeliumButtonSize.Small ->MaterialTheme.typography.bodySmall
-        HeliumButtonSize.Large -> MaterialTheme.typography.headlineSmall
-        HeliumButtonSize.Medium -> MaterialTheme.typography.titleSmall
-        HeliumButtonSize.Tiny -> MaterialTheme.typography.labelSmall
+        HeliumButtonSize.Small ->MaterialTheme.typography.bodyMedium
+        HeliumButtonSize.Large -> MaterialTheme.typography.headlineMedium
+        HeliumButtonSize.Medium -> MaterialTheme.typography.titleMedium
+        HeliumButtonSize.Tiny -> MaterialTheme.typography.labelMedium
     }
 }
