@@ -17,10 +17,10 @@ object HeliumColor {
     val neutralDark3 = Color(0xFF1F1F1F)
     val neutralDark = Color(0xFF121212)
 
-    val accent = Color(0xFF0880AE)
-    val warning = Color(0xFF14A38B)
+    val info = Color(0xFF0880AE)
+    val warning = Color(0xFFFF7E00)
     val success = Color(0xFF14A38B)
-    val error = Color(0xFFFF7171)
+    val error = Color(0xFFD41818)
 
 
     val shade = Color(0xFFDBE2EA)
@@ -44,7 +44,8 @@ object HeliumColor {
         surface = neutralDark,
         error = error,
         primaryContainer = neutralDark,
-        secondaryContainer = neutralDark2
+        secondaryContainer = neutralDark2,
+        surfaceVariant = neutralDark3
     )
 
     val LightColorPalette = lightColorScheme(
@@ -58,7 +59,10 @@ object HeliumColor {
         surface = neutralLight,
         error = error,
         primaryContainer = neutralLight,
-        secondaryContainer = neutralLight2
+        secondaryContainer = neutralLight2,
+        surfaceVariant = neutralLight1
+
+
     )
 
 

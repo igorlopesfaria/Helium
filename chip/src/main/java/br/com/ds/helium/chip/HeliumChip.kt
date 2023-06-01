@@ -29,6 +29,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.ds.helium.core.HeliumTheme
+import br.com.ds.helium.core.dimen.HeliumIconSize
 import br.com.ds.helium.core.dimen.HeliumMargin
 
 
@@ -61,7 +62,7 @@ fun HeliumChip(
                 iconLeft?.let {
                     Icon(
                         imageVector = iconLeft,
-                        modifier =Modifier.size(14.dp).padding(top = HeliumMargin.xxxxs),
+                        modifier =Modifier.size(HeliumIconSize.small).padding(top = HeliumMargin.xxxxs),
                         contentDescription = "drawable_icons",
                         tint = when {
                             selected -> MaterialTheme.colorScheme.primaryContainer
@@ -91,7 +92,7 @@ fun HeliumChip(
                     Spacer(modifier = Modifier.width(6.dp))
                     Icon(
                         imageVector = iconRight,
-                        modifier =Modifier.size(14.dp).padding(top = HeliumMargin.xxxxs),
+                        modifier =Modifier.size(HeliumIconSize.small).padding(top = HeliumMargin.xxxxs),
                         contentDescription = "drawable_icons",
                         tint = when {
                             selected -> MaterialTheme.colorScheme.primaryContainer

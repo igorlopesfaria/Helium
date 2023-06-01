@@ -30,8 +30,10 @@ object HeliumFontSize {
     val xxxl = 64.sp
 }
 
-object IconSize {
-    val small = 16.dp
+object HeliumIconSize {
+    val small = 14.dp
+    val medium = 16.dp
+    val large = 20.dp
     val default = 24.dp
 }
 

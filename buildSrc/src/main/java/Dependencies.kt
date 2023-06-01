@@ -15,6 +15,7 @@ object Module {
     const val core = ":core"
     const val chip = ":chip"
     const val button = ":button"
+    const val infoview = ":infoview"
 }
 
 object Versions {

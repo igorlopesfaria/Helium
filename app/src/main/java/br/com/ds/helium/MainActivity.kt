@@ -12,6 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.ds.helium.button.ListButton
 import br.com.ds.helium.chip.ChipScreen
 import br.com.ds.helium.core.HeliumTheme
+import br.com.ds.helium.infoview.InfoViewScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ChipScreen()
+                    InfoViewScreen()
                 }
             }
         }
@@ -34,7 +35,7 @@ class MainActivity : ComponentActivity() {
 fun GreetingPreview() {
     HeliumTheme {
         Surface ( color = MaterialTheme.colorScheme.background) {
-            ChipScreen()
+            InfoViewScreen()
         }
     }
 }

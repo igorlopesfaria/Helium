@@ -30,7 +30,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
             .padding(HeliumMargin.xs)) {
             Column {
                 LazyRow {
-                    itemsIndexed(chipList) { index, item ->
+                    itemsIndexed(chipList) { _, item ->
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = false,
@@ -42,7 +42,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                     }
                 }
                 LazyRow {
-                    itemsIndexed(chipList) { index, item ->
+                    itemsIndexed(chipList) { _, item ->
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = false,
@@ -53,7 +53,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                     }
                 }
                 LazyRow {
-                    itemsIndexed(chipList) { index, item ->
+                    itemsIndexed(chipList) { _, item ->
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = false,
@@ -65,7 +65,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                 }
 
                 LazyRow {
-                    itemsIndexed(chipList) { index, item ->
+                    itemsIndexed(chipList) { _, item ->
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = false,
@@ -77,7 +77,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
 
                 // selected
                 LazyRow {
-                    itemsIndexed(chipList) { index, item ->
+                    itemsIndexed(chipList) { _, item ->
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = true,
@@ -89,7 +89,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                     }
                 }
                 LazyRow {
-                    itemsIndexed(chipList) { index, item ->
+                    itemsIndexed(chipList) { _, item ->
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = true,
@@ -100,7 +100,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                     }
                 }
                 LazyRow {
-                    itemsIndexed(chipList) { index, item ->
+                    itemsIndexed(chipList) { _, item ->
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = true,
@@ -112,7 +112,7 @@ fun ChipScreen(modifier: Modifier = Modifier) {
                 }
 
                 LazyRow {
-                    itemsIndexed(chipList) { index, item ->
+                    itemsIndexed(chipList) { _, item ->
                         Spacer(modifier = Modifier.width(6.dp))
                         HeliumChip(
                             selected = true,

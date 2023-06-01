@@ -18,6 +18,8 @@
             <option value="$PROJECT_DIR$/checkbox" />
             <option value="$PROJECT_DIR$/chip" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/infoview" />
+            <option value="$PROJECT_DIR$/radiobutton" />
             <option value="$PROJECT_DIR$/statusview" />
             <option value="$PROJECT_DIR$/togglebutton" />
           </set>

@@ -66,6 +66,7 @@ dependencies {
     implementation(project(Module.chip))
     implementation(project(Module.core))
     implementation(project(Module.button))
+    implementation(project(Module.infoview))
 
     implementation(Libs.Activity.getActivityComposeVersion())
 
