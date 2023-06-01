@@ -69,7 +69,7 @@ fun HeliumChip(
                             else -> MaterialTheme.colorScheme.primary
                         }
                     )
-                    Spacer(modifier = Modifier.width(4.dp))
+                    Spacer(modifier = Modifier.width(HeliumMargin.xxxs))
                 } ?: run {
                    if (iconRight != null)
                        Spacer(modifier = Modifier.width(6.dp))
@@ -101,7 +101,7 @@ fun HeliumChip(
                     )
 
                 } else if(iconLeft != null) {
-                    Spacer(modifier = Modifier.width(4.dp))
+                    Spacer(modifier = Modifier.width(HeliumMargin.xxxs))
                 }
 
             }

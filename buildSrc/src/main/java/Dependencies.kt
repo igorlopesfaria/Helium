@@ -18,6 +18,7 @@ object Module {
     const val radiobutton = ":radiobutton"
     const val infoview = ":infoview"
     const val checkbox = ":checkbox"
+    const val statusview = ":statusview"
 }
 
 object Versions {

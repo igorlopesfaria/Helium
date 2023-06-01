@@ -69,6 +69,7 @@ dependencies {
     implementation(project(Module.button))
     implementation(project(Module.radiobutton))
     implementation(project(Module.infoview))
+    implementation(project(Module.statusview))
 
     implementation(Libs.Activity.getActivityComposeVersion())
 

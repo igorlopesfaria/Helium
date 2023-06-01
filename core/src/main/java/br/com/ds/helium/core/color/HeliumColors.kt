@@ -21,6 +21,8 @@ object HeliumColor {
     val warning = Color(0xFFFF7E00)
     val success = Color(0xFF14A38B)
     val error = Color(0xFFD41818)
+    val empty = Color(0xFF7D5260)
+    val noInternet = Color(0xFF7C9CBF)
 
 
     val shade = Color(0xFFDBE2EA)

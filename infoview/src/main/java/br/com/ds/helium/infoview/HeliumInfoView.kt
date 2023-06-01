@@ -61,7 +61,7 @@ fun HeliumInfoView(
                     modifier = Modifier
                         .size(HeliumIconSize.large)
                         .padding(top = HeliumMargin.xxxxs),
-                    contentDescription = "drawable_icons",
+                    contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSecondary
                 )
                 Text(
