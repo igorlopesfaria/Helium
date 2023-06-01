@@ -1,15 +1,17 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
+    id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 android {
     namespace = "br.com.ds.helium.radiobutton"
-    compileSdk = 33
+    compileSdk = Apps.compileSdkVersion
 
     defaultConfig {
-        minSdk = 24
-        targetSdk = 33
+        minSdk = Apps.minSdkVersion
+        targetSdk = Apps.targetSdkVersion
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -31,14 +33,29 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.2.0"
+    }
+    buildFeatures {
+        compose = true
+    }
+
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(project(Module.core))
+
+    implementation(Libs.Core.coreKtxVersion())
+    implementation(Libs.Activity.getActivityComposeVersion())
+
+    implementation(platform(Libs.Compose.getComposeBOM()))
+    implementation(Libs.Compose.getComposeMaterialVersion())
+    implementation(Libs.Compose.getComposeToolingPreviewVersion())
+    implementation(Libs.Compose.getComposeUIVersion())
+    debugImplementation(Libs.Compose.getComposeToolingVersion())
+
+    androidTestImplementation(Libs.Compose.getComposeTestJUnitVersion())
+    testImplementation(Libs.Test.getJunitVersion())
+
 }
