@@ -90,3 +90,17 @@ private fun LightButtonPreview() {
         }
     }
 }
+
+@Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
+private fun DarkButtonPreview() {
+    HeliumTheme {
+        Surface {
+            HeliumRadioButton(
+                text = "Test",
+                isSelected = true,
+                onCheckedChange = {}
+            )
+        }
+    }
+}
