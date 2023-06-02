@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-parcelize")
     id("kotlin-kapt")
+    id("maven-publish")
 }
 
 android {
@@ -43,6 +44,23 @@ android {
 
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.0"
+    }
+
+    afterEvaluate {
+        publishing {
+            publications {
+                register<MavenPublication>("release") {
+                    groupId = Apps.groupId
+                    artifactId = "button"
+                    version = Apps.versionName
+
+                    afterEvaluate {
+                        from(components["release"])
+                    }
+                }
+            }
+        }
+
     }
 
 }

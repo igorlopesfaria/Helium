@@ -20,6 +20,7 @@ buildscript {
         mavenCentral()
         maven("https://maven.fabric.io/public")
         maven("https://oss.jfrog.org/artifactory/oss-snapshot-local")
+        maven ( "https://jitpack.io" )
     }
 
     dependencies {

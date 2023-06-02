@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-parcelize")
     id("kotlin-kapt")
+    id("maven-publish")
 }
 
 android {
@@ -40,6 +41,24 @@ android {
     buildFeatures {
         compose = true
     }
+
+    afterEvaluate {
+        publishing {
+            publications {
+                register<MavenPublication>("release") {
+                    groupId = Apps.groupId
+                    artifactId = "checkbox"
+                    version = Apps.versionName
+
+                    afterEvaluate {
+                        from(components["release"])
+                    }
+                }
+            }
+        }
+
+    }
+
 }
 
 dependencies {

@@ -5,7 +5,7 @@ object Apps {
     const val versionName = "1.0.0"
     const val versionCode = 1
 
-    const val groupId = "br.com.ds.hellium"
+    const val groupId = "br.com.igorlopesfaria.ds.hellium"
     const val applicationId = groupId
     const val scheme = "helium"
 
