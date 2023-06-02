@@ -1,15 +1,17 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
+    id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 android {
     namespace = "br.com.ds.helium.bottomsheet"
-    compileSdk = 33
+    compileSdk = Apps.compileSdkVersion
 
     defaultConfig {
-        minSdk = 24
-        targetSdk = 33
+        minSdk = Apps.minSdkVersion
+        targetSdk = Apps.targetSdkVersion
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -25,20 +27,35 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.0"
+    }
+    buildFeatures {
+        compose = true
+    }
+
 }
 
 dependencies {
+    implementation(project(Module.core))
 
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(Libs.Core.coreKtxVersion())
+    implementation(Libs.Activity.getActivityComposeVersion())
+
+    implementation(platform(Libs.Compose.getComposeBOM()))
+    implementation(Libs.Compose.getComposeMaterial3Version())
+    implementation(Libs.Compose.getComposeToolingPreviewVersion())
+    implementation(Libs.Compose.getComposeUIVersion())
+    debugImplementation(Libs.Compose.getComposeToolingVersion())
+
+    androidTestImplementation(Libs.Compose.getComposeTestJUnitVersion())
+    testImplementation(Libs.Test.getJunitVersion())
+
 }

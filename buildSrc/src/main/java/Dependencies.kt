@@ -19,15 +19,18 @@ object Module {
     const val infoview = ":infoview"
     const val checkbox = ":checkbox"
     const val statusview = ":statusview"
+    const val bottomsheet = ":bottomsheet"
 }
 
 object Versions {
 
-    const val KOTLIN_VERSION = "1.6.21"
+    const val KOTLIN_VERSION = "1.7.0"
     const val ANDROIDX_CORE_VERSION = "1.9.0"
     const val GRADLE_PLUGIN_VERSION = "7.2.2"
     const val ACTIVITY_VERSION = "1.6.1"
-    const val COMPOSE_BOOM_VERSION = "2023.01.00"
+    const val COMPOSE_BOOM_VERSION = "2023.05.01"
+    const val COMPOSE_MATERIAL_3_VERSION = "1.1.0"
+    const val COMPOSE_UI_VERSION = "1.4.3"
     const val TEST_JUNIT_VERSION = "4.13.2"
 
 }
@@ -61,11 +64,10 @@ object Libs {
 
     object Compose {
         fun getComposeBOM() = "androidx.compose:compose-bom:${Versions.COMPOSE_BOOM_VERSION}"
-        fun getComposeUIVersion() = "androidx.compose.ui:ui"
-        fun getComposeMaterialVersion() = "androidx.compose.material3:material3"
-        fun getComposeToolingPreviewVersion() = "androidx.compose.ui:ui-tooling-preview"
-
-        fun getComposeToolingVersion() = "androidx.compose.ui:ui-tooling"
+        fun getComposeUIVersion() = "androidx.compose.ui:ui:${Versions.COMPOSE_UI_VERSION}"
+        fun getComposeMaterial3Version() = "androidx.compose.material3:material3:${Versions.COMPOSE_MATERIAL_3_VERSION}"
+        fun getComposeToolingPreviewVersion() = "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE_UI_VERSION}"
+        fun getComposeToolingVersion() = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE_UI_VERSION}"
         fun getComposeTestJUnitVersion() = "androidx.compose.ui:ui-test-junit4:1.4.2"
     }
 

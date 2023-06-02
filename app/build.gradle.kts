@@ -39,9 +39,6 @@ android {
         jvmTarget = "1.8"
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0"
-    }
     buildFeatures {
         compose = true
     }
@@ -58,6 +55,18 @@ android {
         unitTests.isIncludeAndroidResources = true
         unitTests.isReturnDefaultValues = true
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.0"
+    }
+
 
 }
 
@@ -70,11 +79,12 @@ dependencies {
     implementation(project(Module.radiobutton))
     implementation(project(Module.infoview))
     implementation(project(Module.statusview))
+    implementation(project(Module.bottomsheet))
 
     implementation(Libs.Activity.getActivityComposeVersion())
 
     implementation(platform(Libs.Compose.getComposeBOM()))
-    implementation(Libs.Compose.getComposeMaterialVersion())
+    implementation(Libs.Compose.getComposeMaterial3Version())
     implementation(Libs.Compose.getComposeToolingPreviewVersion())
     implementation(Libs.Compose.getComposeUIVersion())
     debugImplementation(Libs.Compose.getComposeToolingVersion())

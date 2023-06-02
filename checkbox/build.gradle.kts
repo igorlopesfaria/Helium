@@ -27,19 +27,19 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
+
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0"
+        kotlinCompilerExtensionVersion = "1.4.0"
     }
     buildFeatures {
         compose = true
     }
-
 }
 
 dependencies {
@@ -50,7 +50,7 @@ dependencies {
     implementation(Libs.Activity.getActivityComposeVersion())
 
     implementation(platform(Libs.Compose.getComposeBOM()))
-    implementation(Libs.Compose.getComposeMaterialVersion())
+    implementation(Libs.Compose.getComposeMaterial3Version())
     implementation(Libs.Compose.getComposeToolingPreviewVersion())
     implementation(Libs.Compose.getComposeUIVersion())
     debugImplementation(Libs.Compose.getComposeToolingVersion())
